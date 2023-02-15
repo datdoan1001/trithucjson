@@ -1,63 +1,60 @@
 {
-  "data": {
-      "Thread": {
-        "_": {
-          "items": 10
-        },
-        "title": {
-          "loremWords": {
-            "minLength": 5,
-            "maxLength": 20
-          }
-        },
-        "message": {
-          "loremParagraphs": {
-            "minLength": 10,
-            "maxLength": 100
-          }
-        },
-        "category": {
-          "string": ["one", "two", "three"]
-        },
-        "isDraft": {
-          "boolean": {}
-        },
-        "views": {
-          "int": {
-            "min": 0,
-            "max": 1000
-          }
-        },
-        "createdAt": {
-          "dateTime": {
-            "min": "2010-01-01T00:00:00Z",
-            "max": "2020-12-31T23:59:59Z"
-          }
-        },
-        "posts": {
-          "hasMany": "Post"
-        }
-     },
-    "Post": {
-      "_": {
-        "items": 25
-      },
-      "message": {
-        "loremParagraphs": {
-          "minLength": 10,
-          "maxLength": 100
-        }
-      },
-      "createdAt": {
-        "dateTime": {
-          "min": "2010-01-01T00:00:00Z",
-          "max": "2020-12-31T23:59:59Z"
-        }
-      },
-      "thread": {
-        "belongsTo": "Thread"
+  "Thread": {
+    "_": {
+      "items": 10
+    },
+    "title": {
+      "loremWords": {
+        "minLength": 5,
+        "maxLength": 20
       }
+    },
+    "message": {
+      "loremParagraphs": {
+        "minLength": 10,
+        "maxLength": 100
+      }
+    },
+    "category": {
+      "string": ["one", "two", "three"]
+    },
+    "isDraft": {
+      "boolean": {}
+    },
+    "views": {
+      "int": {
+        "min": 0,
+        "max": 1000
+      }
+    },
+    "createdAt": {
+      "dateTime": {
+        "min": "2010-01-01T00:00:00Z",
+        "max": "2020-12-31T23:59:59Z"
+      }
+    },
+    "posts": {
+      "hasMany": "Post"
     }
-  },
-  "errors": ""
+ },
+  "Post": {
+    "_": {
+      "items": 25
+    },
+    "message": {
+      "loremParagraphs": {
+        "minLength": 10,
+        "maxLength": 100
+      }
+    },
+    "createdAt": {
+      "dateTime": {
+        "min": "2010-01-01T00:00:00Z",
+        "max": "2020-12-31T23:59:59Z"
+      }
+    },
+    "thread": {
+      "belongsTo": "Thread"
+    }
+  }
 }
